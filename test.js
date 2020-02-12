@@ -4,22 +4,22 @@ function test(input) {
     for (i = 1; i <= input; i++) {
         if (i % 2 == 0) {
             output += '@ '
-            for (k = 1; k < 14; k++) {
+            for (k = 1; k < input-1; k++) {
                 output += '  '
             }
             output += '@ '
         }
         else {
-            for (j = 1; j <= 15; j++) {
+            for (j = 1; j <= input; j++) {
                 if (i == ((4 * j) - 3)) {
                     output += '@ '
                     output += '  '
-                    for (k = 0; k < 13; k++) {
+                    for (k = 0; k < input-2; k++) {
                         output += '@ '
                     }
                 }
                 else if (i == (4 * j) - 1) {
-                    for (z = 0; z < 13; z++) {
+                    for (z = 0; z < input-2; z++) {
                         output += '@ '
                     }
                     output += '  '
@@ -35,4 +35,4 @@ function test(input) {
     return output
 
 }
-console.log(test(29))
+console.log(test(15))
